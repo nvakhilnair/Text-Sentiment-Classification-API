@@ -5,9 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-fu0m1p3la^-yd*9swf=(+6#os^g-t*9_=uy4bd7yd_k14)^^p1'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['text-classfication-api.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
