@@ -7,6 +7,8 @@ SECRET_KEY = 'django-insecure-fu0m1p3la^-yd*9swf=(+6#os^g-t*9_=uy4bd7yd_k14)^^p1
 
 DEBUG = False
 
+ADMIN_ENABLED = False
+
 ALLOWED_HOSTS = ['text-classfication-api.herokuapp.com']
 
 INSTALLED_APPS = [
