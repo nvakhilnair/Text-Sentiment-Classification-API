@@ -34,7 +34,7 @@ Installation of required python libraries
     r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
     ```
 
-## Deployment
+## Deployment(Cloud)
 The application is deployed on the cloud using heroku.  
 link : https://text-classfication-api.herokuapp.com/
 
