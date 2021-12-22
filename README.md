@@ -34,6 +34,16 @@ Installation of required python libraries
     r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
     ```
 
+## Deployement
+The application is deployed on the cloud using heroku.  
+link : https://text-classfication-api.herokuapp.com/
+
+```bash
+    import requests
+    URL = "https://text-classfication-api.herokuapp.com"
+    data = "I am sad"
+    r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
+```
 ## Features
 
 - No credentials required
