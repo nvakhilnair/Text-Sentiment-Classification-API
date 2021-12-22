@@ -12,7 +12,6 @@ ADMIN_ENABLED = False
 ALLOWED_HOSTS = ['text-classfication-api.herokuapp.com']
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -21,6 +20,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'classification_api',
 ]
+
+if ADMIN_ENABLED is True:
+    INSTALLED_APPS.append('django.contrib.admin')
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
