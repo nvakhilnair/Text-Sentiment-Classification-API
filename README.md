@@ -51,6 +51,9 @@ link : https://text-classfication-api.herokuapp.com/
 - Can be used for text containing emoji
 - Can be easily integrated with any model or application
 
+## Demo
+https://text-classfication-api.herokuapp.com/
+
 
 ## Tech Stack
 
