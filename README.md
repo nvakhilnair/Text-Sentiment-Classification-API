@@ -20,7 +20,7 @@ Installation of required python libraries
 ```
 
 
-## Usage
+## Usage(Locally)
 
 - Using curl
     ```bash
@@ -34,7 +34,7 @@ Installation of required python libraries
     r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
     ```
 
-## Deployement
+## Deployment
 The application is deployed on the cloud using heroku.  
 link : https://text-classfication-api.herokuapp.com/
 
