@@ -24,7 +24,7 @@ Installation of required python libraries
 
 - Using curl
     ```bash
-    curl -X POST -H "Content-text/plain" http://127.0.0.1:9000 -d "I am Happy"
+    curl -X POST 127.0.0.1:9000 -H "Content-Type: text/plain" -d "I am happy"
     ```
 - Using Python
     ```bash
