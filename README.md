@@ -1,8 +1,8 @@
 
 # Text Sentiment Classification API
 
-API classifies textual data into positive, negative and neutral based on the polarity score.
-The model uses Vader model for the classification which is an lexicon based model.
+API classifies textual data into positive, negative, and neutral based on the polarity score.
+The model uses the Vader model for the classification which is a lexicon-based model.
 
 ## Installation
 
