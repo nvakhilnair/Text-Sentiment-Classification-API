@@ -19,4 +19,4 @@ class PlainTextParser(BaseParser):
             text_content = decoded_stream.read()
             return text_content
         except ValueError as exc:
-            raise ParseError('Plain text parse error - %s' % str(exc))
+            raise ParseError('Plain text parse error')
