@@ -4,65 +4,65 @@
 API classifies textual data into positive, negative, and neutral based on the polarity score.
 The model uses the Vader model for the classification which is a lexicon-based model.
 
-## Installation
+## Docker
 
-Installation of required python libraries
+To containerize the application using Docker, follow these steps:
 
-```bash
-  pip install -r requirement.txt
-```
-
-## Run Locally
-
-1. To run this project run the following command in downloaded directory
-```bash
-  python manage.py runserver 127.0.0.1:9000
-```
-
-
-## Usage(Locally)
-
-- Using curl
-    ```bash
-    curl -X POST 127.0.0.1:9000 -H "Content-Type: text/plain" -d "I am happy"
+1. Build the Docker image: 
     ```
-- Using Python
-    ```bash
-    import requests
-    URL = "http://127.0.0.1:9000"
-    data = "I am happy"
-    r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
+    docker build -t text-sentiment-classification .
+    ```
+2. Run the Docker container: 
+    ```
+    docker run -d -p 8000:8000 text-sentiment-classification
     ```
 
-## Deployment(Cloud)
-The application is deployed on the cloud using heroku.  
-link : https://text-classfication-api.herokuapp.com/
+## Starting the Application
 
-```bash
-    import requests
-    URL = "https://text-classfication-api.herokuapp.com"
-    data = "I am sad"
-    r = requests.post(url = URL, data = data,headers={'Content-Type': 'text/plain'})
+To start the application, you can use the provided batch (.bat) or shell (.sh) files:
+
+- For Windows (.bat): 
+    ```
+    start_app.bat
+    ```
+- For Unix-based systems (.sh):
+    ```
+    ./start_app.sh
+    ```
+
+Ensure that you have installed the required dependencies mentioned in `requirements.txt` before starting the application.
+
+
+## Usage
+
+To utilize the text processing API provided by this project, you can send a `GET` request to the `/classify` endpoint. Below is an example `curl` command demonstrating how to use the endpoint:
+
+### using curl
 ```
-## Features
+curl 'http://127.0.0.1:8000/classify/?input_text=Hello%20my%20name%20is%20akhil&preprocess=false
+```
 
-- No credentials required
-- Responsive and Fast
-- Can be used for text containing emoji
-- Can be easily integrated with any model or application
+### using python
 
-## Demo
-https://text-classfication-api.herokuapp.com/
+```
+import requests
 
+url = 'http://127.0.0.1:8000/classify/'
+params = {
+    'input_text': 'Hello my name is akhil',
+    'preprocess': 'false'
+}
+response = requests.get(url, params=params)
+```
 
 ## Tech Stack
 
-**Client:** HTML, CSS
-
-**Server:** Python, Django, Django Rest Framework
-
-
-
+- Python
+- FastAPI
+- Uvicorn
+- HTML
+- CSS
+- Javascript
 
 ## License
 
